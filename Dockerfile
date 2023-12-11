@@ -8,6 +8,6 @@ RUN apt update && apt upgrade -y && \
   rm -rf /var/lib/apt/lists/* && \
   mkdir -p /opt/scripts
 
-CMD ["pip", "install", "git+https://github.com/openai/whisper.git"]
+CMD ["pip", "install", "git+https://github.com/openai/whisper.git", "--break-system-packages"]
 CMD ["wget", "https://archive.org/download/jfks19630626/jfk_1963_0626_berliner_64kb.mp3", "-O", "jfk.mp3"]
 CMD ["bash", "/opt/scripts/start.sh"]
