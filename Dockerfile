@@ -7,6 +7,5 @@ RUN apt update && apt upgrade -y && \
   apt clean && \
   rm -rf /var/lib/apt/lists/* && \
   mkdir -p /opt/scripts
-
-CMD ["pip", "install", "-U", "openai-whisper", "--break-system-packages"]
+RUN pip install -U openai-whisper --break-system-packages
 CMD ["bash", "/opt/scripts/start.sh"]
